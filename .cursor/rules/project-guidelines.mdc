@@ -1,0 +1,25 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Portfolio Project Guidelines
+
+## 1. Project Goal
+
+The main objective is to create a modern, fast, and professional personal portfolio website. All features and requirements are detailed in the [Product Requirements Document (PRD)](mdc:PRD.md).
+
+## 2. Technology Stack
+
+This project will be built using the following technologies. Adherence to this stack is crucial.
+
+-   **Framework:** SvelteKit
+-   **Runtime & Package Manager:** Bun
+-   **Language:** TypeScript
+-   **Styling:** Tailwind CSS
+
+## 3. Development Notes
+
+-   Refer to the roadmap in the [PRD](mdc:PRD.md) for development phases.
+-   **Current Status:** We are currently in the initial project setup phase. Attempts to scaffold the project using `bun create`, `npm create`, and `sv create` have been unsuccessful. The immediate next step is to find a reliable way to set up the SvelteKit project with the specified stack.
+
