@@ -1,0 +1,14 @@
+# Security headers for all pages
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Cache control for static assets
+/_app/immutable/*
+  Cache-Control: public, immutable, max-age=31536000
+
+# Cache control for other assets
+/favicon.png
+  Cache-Control: public, max-age=86400 
