@@ -3,4 +3,4 @@
   publish = ".svelte-kit/output/client"
 
 [build.environment]
-  BUN_VERSION = "1.0.0" 
+  BUN_VERSION = "latest" 
