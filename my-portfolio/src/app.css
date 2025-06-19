@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* 전역 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-feature-settings: 'kern' 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 사이드바 스크롤바 숨기기 */
+aside::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* 부드러운 호버 효과 */
+a {
+  transition: all 0.2s ease-in-out;
+}
+
+/* 커스텀 스타일 */
+.sidebar-link {
+  position: relative;
+  display: block;
+  padding: 8px 0;
+  color: #374151;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  padding-left: 16px;
+  margin-left: -16px;
+}
+
+.sidebar-link:hover {
+  color: #111827;
+  border-left-color: #e5e7eb;
+}
+
+.sidebar-link.active {
+  color: #111827;
+  font-weight: 500;
+  border-left-color: #374151;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  /* 모바일에서는 사이드바를 숨기고 상단 네비게이션으로 변경 */
+  .desktop-layout {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .sidebar nav {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+  
+  .sidebar .space-y-6 {
+    display: flex;
+    gap: 2rem;
+    white-space: nowrap;
+  }
+  
+  .main-content {
+    height: calc(100vh - 200px);
+  }
+}
+
+/* 커스텀 애니메이션 */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 0.6s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 0.6s ease-out;
+}
