@@ -1,6 +1,6 @@
 [build]
   command = "bun run build"
-  publish = ".svelte-kit/output/client"
+  publish = "build"
 
 [build.environment]
   BUN_VERSION = "latest" 
